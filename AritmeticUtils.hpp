@@ -5,8 +5,4 @@ namespace P23 {
 		return (b +((a)%b))%b;
 	}
 	
-	
-	
-	
-	
 } // namespace P23
