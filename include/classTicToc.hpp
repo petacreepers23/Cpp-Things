@@ -5,6 +5,7 @@
 This file will only have things related with measuring time in a easy manner
 
 //TODO: QuickTicToc: a class that on constructor starts timing, and on destructor ends.
+//TODO: after that, probably a rename to "utilityTime.hpp would occurr"
 */
 namespace P23 {
 
