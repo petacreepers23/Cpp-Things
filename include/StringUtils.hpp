@@ -1,10 +1,13 @@
 ﻿#include <string>
 #include <vector>
 
+/*
+This file will only have things related with any kind of manipulation to std::string
+*/
 namespace P23 {
 	
 	/*
-		Divide str en un vector de strings, delimitador por el string separator, y como maximo en maxplit secciones.
+		Splits str in a std::string vector, delimiting each str by separator, and at max with maxplit sections.
 
 		Ejemplo: str = "Hola mundo bla bla bla"
 		split(str," ") -> {"Hola", "mundo", "bla", "bla", "bla"}

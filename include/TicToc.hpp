@@ -1,21 +1,25 @@
 #include <iostream>
 #include <chrono>
 
-//Petacreepers23 namespace
+/*
+This file will only have things related with measuring time in a easy manner
+
+//TODO: QuickTicToc: a class that on constructor starts timing, and on destructor ends.
+*/
 namespace P23 {
 
 	class TicToc {
 	public:
-		//Empieza el contador
+		//Counter Starts
 		void tic() {
 			t0 = std::chrono::high_resolution_clock::now();
 		}
-		//Acaba e imprime el tiempo
+		//Counter Ends and prints time
 		void toc() {
 			t1 = std::chrono::high_resolution_clock::now();
 			std::cout << "Elapsed: " << 1.e-9*std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count() << "s" << std::endl;
 		}
-		//Si se ha ejecutado en un bucle, divide el tiempo total entre el numero de iteraciones
+		//For use after a loop, divides the final time by the total number of iterations
 		void toc(size_t iters) {
 			t1 = std::chrono::high_resolution_clock::now();
 			std::cout << "Elapsed: " << 1.e-9*std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count() / iters << "s" << std::endl;
