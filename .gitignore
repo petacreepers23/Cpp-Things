@@ -1,0 +1,16 @@
+.metadata/
+outgoing/
+# Object files
+*.o
+*/obj/*
+.settings/
+.DS_Store
+*.idea/
+*.vscode
+*/bin/*
+*.clangd*
+compile_commands.commands.json
+compile_commands.json
+coverage.info
+*.map
+.cache/
