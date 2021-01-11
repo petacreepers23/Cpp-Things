@@ -1,0 +1,28 @@
+name: C++ CI with Make
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure #installs google test
+      id: "0"
+      run: ./configure
+    - name: execution #run tests
+      id: "1"
+      run: make all
+    - name: cleaning #clean unneded files
+      id: "2"
+      run: make ckean
+    #- name: make check
+    #  run: make check
+    #- name: make distcheck
+    #  run: make distcheck
