@@ -7,7 +7,7 @@ namespace P23 {
 	example:
 		-----
 		while(true){
-			RunOnce hey([](){std::cout << "Echo!" << std::endl;});
+			static RunOnce hey([](){std::cout << "Echo!" << std::endl;});
 			std::cout << "...echo" << std::endl;
 		}
 		-----
