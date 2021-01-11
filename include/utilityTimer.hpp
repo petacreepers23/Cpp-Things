@@ -47,11 +47,10 @@ namespace P23 {
 			~QuickTicToc() {
 				std::chrono::steady_clock::time_point timeEnd =
 					std::chrono::steady_clock::now();
-				std::cout << "Elapsed: "
+					std::cout << "Elapsed: "
 					<< nanoConversion *
-					std::chrono::duration_cast<std::chrono::nanoseconds>(
-							timeEnd - timeStart)
-					.count()
+					std::chrono::duration_cast<std::chrono::nanoseconds>
+					(timeEnd - timeStart).count()
 					<< "s" << std::endl;
 			}
 
