@@ -21,13 +21,16 @@ endif
 
 
 
-all: prepare gtest test
+all: prepare googletest gtest test
 
 prepare:
 	mkdir -p $(BIND)
 
+googletest:
+	$(CC) $(CFLAGS) -c gtest-test.C -o $(BIND)/gtest-test.o
+
 gtest:
-	$(CC) $(CFLAGS) $(LIBS_I) -g gtest-test.C -o $(BIND)/gtest-test
+	$(CC) $(CFLAGS) $(LIBS_I) gtest-test.o -o $(BIND)/gtest-test
 
 test:
 	./$(BIND)/gtest-test
