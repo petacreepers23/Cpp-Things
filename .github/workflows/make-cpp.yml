@@ -15,11 +15,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: configure #installs google test
       id: "_0"
-      run: cd $(git rev-parse --git-dir)/test && ./configure
+      run: cd $(git rev-parse --git-dir)/../test && ./configure
 
     - name: execution #run tests
       id: "_1"
-      run: cd $(git rev-parse --git-dir)/test && make all
+      run: cd $(git rev-parse --git-dir)/../test && make all
 
     #- name: cleaning #clean unneded files
       #id: "_2"
