@@ -10,7 +10,7 @@ else
 	UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 		#LIBS_I := `pkg-config --libs-only-l gtest gmock`
-		LIBS_I := -lgtest -lgtest_main -pthread /usr/local/lib/libgtest.a
+		LIBS_I := -lgtest -pthread /usr/local/lib/libgtest.a
 
 		# Compiling for Linux
     endif
