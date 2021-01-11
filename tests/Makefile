@@ -1,5 +1,5 @@
 CFLAGS			:= -Wall
-LIBS_I 			:= -lgtest -lgmock
+#LIBS_I 			:= pkg-config --libs-only-l gtest gmock
 
 BIND			:= bin
 
@@ -9,6 +9,7 @@ else
 	CC := g++
 	UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
+		LIBS_I := `pkg-config --libs-only-l gtest gmock`
 		# Compiling for Linux
     endif
     ifeq ($(UNAME_S),Darwin)
