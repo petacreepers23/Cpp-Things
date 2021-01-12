@@ -1,8 +1,8 @@
 #include "../include/utilityTimer.hpp"
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
+//include <gmock/gmock.h>
 
-using ::testing::MatchesRegex;
+//using ::testing::MatchesRegex;
 
 // The fixture for testing class Foo.
 class UtilityTimerTest : public ::testing::Test {

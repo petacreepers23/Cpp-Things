@@ -30,7 +30,7 @@ googletest:
 	$(CC) $(CFLAGS) -c gtest-test.C -o $(BIND)/gtest-test.o
 
 gtest:
-	$(CC) $(CFLAGS) $(LIBS_I) gtest-test.o -o $(BIND)/gtest-test
+	$(CC) $(CFLAGS) $(BIND)/gtest-test.o $(LIBS_I) -o $(BIND)/gtest-test
 
 test:
 	./$(BIND)/gtest-test
