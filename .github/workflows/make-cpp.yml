@@ -1,4 +1,4 @@
-name: C++ CI with Make
+name: linux-make
 
 on:
   push:
@@ -8,27 +8,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
-    - name: Install gtest manually
+
+    - name: install
       run: cd tests && bash configure.sh
-      #run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
 
-    #- name: configure #installs google test
-      #id: "_0"
-      #run: cd tests && ./configure
-
-    - name: execution #run tests
+    - name: test
       id: "_1"
       run: cd tests && make all
-
-    #- name: cleaning #clean unneded files
-      #id: "_2"
-      #run: cd test && make all
-    #- name: make check
-    #  run: make check
-    #- name: make distcheck
-    #  run: make distcheck
