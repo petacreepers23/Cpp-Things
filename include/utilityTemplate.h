@@ -36,13 +36,13 @@ namespace P23 {
 		{4,5,6}
 	}
 	*/
-	template<typename T, size_t N> std::vector<std::vector<T>> combine(const std::vector<T>& elements) {
+	template<typename T> std::vector<std::vector<T>> combine(const std::vector<T>& elements, size_t N) {
 		std::vector<bool> selection_array(elements.size());
 		std::fill(selection_array.end() - N, selection_array.end(), true);
 		std::vector<std::vector<T>> res;
 
 		do {
-			std::vector parcial;
+			std::vector<T> parcial;
 			for (size_t i = 0; i < elements.size(); ++i) {	
 				if (selection_array[i]) {
 					parcial.push_back(elements[i]);
