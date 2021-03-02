@@ -1,3 +1,5 @@
+#include <vector>
+#include <algorithm>
 /*
 This file will only have things related with utility and execution stuff. Non templated code is allowed in this file. Otherwise go to a .hpp
 */

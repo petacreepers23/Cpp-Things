@@ -28,7 +28,7 @@ prepare:
 	mkdir -p $(BIND)
 
 googletest:
-	$(CC) $(CFLAGS) -c gtest-test.C -o $(BIND)/gtest-test.o
+	$(CC) $(CFLAGS) -c gtest-test.cpp -o $(BIND)/gtest-test.o
 
 gtest:
 	$(CC) $(CFLAGS) $(BIND)/gtest-test.o $(LIBS_I) -o $(BIND)/gtest-test
