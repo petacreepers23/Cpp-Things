@@ -1,5 +1,6 @@
 ﻿#include <string>
 #include <vector>
+#include <charconv>
 
 /*
 This file will only have things related with any kind of manipulation to std::string
@@ -28,4 +29,19 @@ namespace P23 {
 		return ret;
 	}
 
+	/*
+		Converts a vector of strings which contains numbers to a vector of numbers.
+
+		Ejemplo: vec = {"1", "2", "3", "4"}
+		from_string_vec_to_int_vec(vec) -> {1, 2, 3, 4}
+	*/
+	std::vector<int> from_string_vec_to_int_vec(std::vector<std::string> vec) {
+		std::vector<int> ret;
+		for (const auto& str : vec) {
+			int num;
+			std::from_chars(str.data(), str.data() + str.size(), num);
+			ret.push_back(num);
+		}
+		return ret;
+	}
 }
